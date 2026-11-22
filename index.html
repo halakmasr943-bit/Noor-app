@@ -1,56 +1,83 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#123c32"><link rel="manifest" href="manifest.webmanifest">
-<title>نور | NOOR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#123c32">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>نُور | NOOR</title>
 <style>
-:root{--green:#123c32;--gold:#c6a96b;--bg:#f7f5ef;--ink:#20352e}
+:root{--green:#123c32;--green2:#1c5144;--gold:#c6a96b;--bg:#f7f5ef;--ink:#20352e;--muted:#718078}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,Tahoma,Arial}
-header{background:linear-gradient(140deg,#123c32,#1c5144);color:white;padding:22px;border-radius:0 0 26px 26px}
-.brand{font-size:27px;font-weight:bold}.brand small{display:block;color:#e5d4ad;font-size:11px;letter-spacing:2px}
-h1{font-size:24px;margin:22px 0 5px}main{max-width:720px;margin:auto;padding:16px 14px 85px}
-h2{color:var(--green)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card,.panel{background:white;border:1px solid #e9e5da;border-radius:17px;padding:16px}
-.card{text-align:right;color:var(--green);min-height:105px;font:inherit}.card b{display:block;margin:8px 0}
-button,input,select{font:inherit}button{cursor:pointer}
-nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #e8e4d9;display:flex;justify-content:space-around;padding:8px}
-nav button{border:0;background:none;color:#52675d;font-size:13px}
-.hidden{display:none!important}.primary{width:100%;padding:15px;border:0;border-radius:14px;background:var(--green);color:white}
-.secondary{padding:10px;border:1px solid #ddd5c5;border-radius:11px;background:white;color:var(--green)}
-.item{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:right;padding:14px;margin:7px 0;border:1px solid #e8e3d8;border-radius:14px;background:white;color:var(--green)}
-input{width:100%;padding:12px;border:1px solid #ddd5c5;border-radius:11px;margin:8px 0}
-.ayah{font-family:"Noto Naskh Arabic",serif;font-size:var(--qsize,27px);line-height:2.1;text-align:justify;padding:14px 3px;border-bottom:1px solid #eee8dd}
-.note{font-size:12px;color:#718078;line-height:1.8}.circle{width:210px;height:210px;border:6px solid var(--gold);border-radius:50%;background:white;margin:20px auto;display:grid;place-items:center;color:var(--green);font-size:58px}
-</style></head><body>
-<header><div class="brand">نُور<small>NOOR • LIGHT FOR THE HEART</small></div><h1>بذكر الله تطمئن القلوب</h1><div>مساحة هادئة للقرآن والأذكار والتسبيح</div></header>
+header{background:linear-gradient(140deg,var(--green),var(--green2));color:#fff;padding:20px 18px 25px;border-radius:0 0 28px 28px}
+.top{display:flex;justify-content:space-between;align-items:center}.brand{font-size:28px;font-weight:800}.brand small{display:block;color:#e5d4ad;font-size:10px;letter-spacing:2px}
+h1{font-size:23px;margin:23px 0 5px}header p{margin:0;color:#e5ebe7}
+main{max-width:760px;margin:auto;padding:16px 14px 100px}h2{color:var(--green);font-size:21px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.tile,.panel{background:#fff;border:1px solid #e9e5da;border-radius:18px;padding:16px}
+.tile{text-align:right;color:var(--green);min-height:112px;font:inherit}.tile b{display:block;margin:8px 0 3px}.tile small,.note{font-size:12px;color:var(--muted);line-height:1.8}
+button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e8e4d9;display:flex;justify-content:space-around;padding:7px 2px;z-index:5}
+nav button{border:0;background:none;color:#52675d;padding:6px;font-size:12px}nav button.active{color:var(--green);font-weight:800}
+.primary{width:100%;padding:15px;border:0;border-radius:14px;background:var(--green);color:#fff}
+.secondary{padding:10px 12px;border:1px solid #ddd5c5;border-radius:11px;background:#fff;color:var(--green)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.row>*{flex:1}
+input{width:100%;padding:12px;border:1px solid #ddd5c5;border-radius:11px;margin:8px 0;background:#fff}
+.item{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:right;padding:14px;margin:7px 0;border:1px solid #e8e3d8;border-radius:14px;background:#fff;color:var(--green)}
+.ayah{font-family:"Noto Naskh Arabic",serif;font-size:var(--qsize,27px);line-height:2.05;text-align:justify;padding:14px 3px;border-bottom:1px solid #eee8dd}
+.badge{display:inline-block;background:#efe8d8;color:#69552d;border-radius:20px;padding:4px 10px;font-size:12px}
+.tabs{display:flex;gap:7px;overflow:auto;padding:4px 0 10px}.tabs button{white-space:nowrap}
+.dhikr{margin:9px 0;padding:16px;background:#fff;border:1px solid #e9e5da;border-radius:17px}
+.dhikr .text{font-family:serif;font-size:23px;line-height:2.05;margin:8px 0;text-align:justify}
+.dhikr .meta{font-size:12px;color:var(--muted);line-height:1.8}
+.counter{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.countbtn{border:0;border-radius:12px;background:var(--green);color:#fff;padding:10px 15px}
+.big{width:210px;height:210px;border:6px solid var(--gold);border-radius:50%;background:#fff;margin:20px auto;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--green)}
+.big strong{font-size:58px;font-weight:400}.muted{color:var(--muted)}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand">نُور<small>NOOR • LIGHT FOR THE HEART</small></div><span class="badge">مجاني • بلا إعلانات</span></div>
+<h1>بذكر الله تطمئن القلوب</h1><p>مساحة هادئة لقراءة القرآن والأذكار والتسبيح</p></header>
 <main>
 <section id="home"><h2>ابدأ رحلتك</h2><div class="grid">
-<button class="card" data-page="quran">📖<b>القرآن الكريم</b><small>قراءة المصحف</small></button>
-<button class="card" data-page="adhkar">🤲<b>الأذكار</b><small>أذكار يومية</small></button>
-<button class="card" data-page="tasbeeh">📿<b>المسبحة</b><small>عداد التسبيح</small></button>
-<button class="card" data-page="saved">🔖<b>محفوظاتي</b><small>الآيات المحفوظة</small></button>
-</div><div class="panel" style="margin-top:12px"><b>متابعة القراءة</b><p id="lastInfo">لم تبدأ القراءة بعد.</p><button class="primary" id="continue">متابعة آخر سورة</button></div></section>
-<section id="quran" class="hidden"><h2>القرآن الكريم</h2><input id="search" placeholder="ابحث باسم السورة أو رقمها"><div id="surahList">جارٍ تحميل فهرس السور…</div><div id="reader" class="hidden"><button class="secondary" id="back">رجوع للسور</button><h2 id="surahTitle"></h2><div style="display:flex;gap:8px"><button class="secondary" id="minus">تصغير الخط</button><button class="secondary" id="plus">تكبير الخط</button></div><div id="ayahList"></div></div><p class="note">القرآن للقراءة فقط. يتم جلب النص بالرسم العثماني من AlQuran Cloud. تحتاج إلى الإنترنت عند فتح السورة أول مرة؛ وتُخزّن السور المفتوحة على جهازك.</p></section>
-<section id="adhkar" class="hidden"><h2>الأذكار</h2><p class="note">هذه مجموعة أولية مختصرة وليست مكتبة الأذكار الكاملة بعد؛ سنضيف الأذكار الموثقة ومصادرها بعد مراجعتها.</p><div class="panel"><div class="ayah">أَسْتَغْفِرُ اللَّهَ</div><p class="note">ذكر عام للاستغفار.</p></div><div class="panel"><div class="ayah">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div><p class="note">ذكر عام.</p></div><div class="panel"><div class="ayah">لَا إِلَهَ إِلَّا اللَّهُ</div><p class="note">ذكر عام.</p></div></section>
-<section id="tasbeeh" class="hidden"><h2>المسبحة</h2><select id="phrase"><option>سُبْحَانَ اللَّهِ</option><option>الْحَمْدُ لِلَّهِ</option><option>اللَّهُ أَكْبَرُ</option><option>أَسْتَغْفِرُ اللَّهَ</option><option>لَا إِلَهَ إِلَّا اللَّهُ</option></select><div class="circle" id="count">0</div><button class="primary" id="tap">اضغط للتسبيح</button><button class="secondary" id="reset">تصفير</button></section>
-<section id="saved" class="hidden"><h2>محفوظاتي</h2><div id="savedList">لا توجد آيات محفوظة.</div></section>
-</main><nav><button data-page="home">⌂<br>الرئيسية</button><button data-page="quran">۞<br>القرآن</button><button data-page="adhkar">🤲<br>الأذكار</button><button data-page="tasbeeh">📿<br>التسبيح</button></nav>
+<button class="tile" data-page="quran">📖<b>القرآن الكريم</b><small>السور والآيات • قراءة فقط</small></button>
+<button class="tile" data-page="adhkar">🤲<b>الأذكار</b><small>الصباح والمساء وغيرها</small></button>
+<button class="tile" data-page="tasbeeh">📿<b>المسبحة</b><small>عداد يحفظ تقدمك</small></button>
+<button class="tile" data-page="saved">🔖<b>المحفوظات</b><small>الآيات المفضلة</small></button>
+</div><div class="panel" style="margin-top:13px"><span class="badge">متابعة القراءة</span><p id="lastInfo">لم تبدأ القراءة بعد.</p><button class="primary" id="continue">متابعة آخر سورة</button></div>
+<div class="panel" style="margin-top:12px"><span class="badge">وقفة اليوم</span><div class="ayah">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div></div></section>
+
+<section id="quran" class="hidden"><h2>القرآن الكريم</h2><input id="search" placeholder="ابحث باسم السورة أو رقمها"><div id="surahList">جارٍ تحميل فهرس السور…</div>
+<div id="reader" class="hidden"><button class="secondary" id="back">رجوع إلى السور</button><h2 id="surahTitle"></h2><div class="row"><button class="secondary" id="minus">تصغير الخط</button><button class="secondary" id="plus">تكبير الخط</button></div><div id="ayahList"></div></div>
+<p class="note">النص القرآني بالرسم العثماني من واجهة AlQuran Cloud. يلزم الإنترنت عند فتح السورة لأول مرة، ثم تُحفظ السورة على جهازك لقراءتها لاحقًا.</p></section>
+
+<section id="adhkar" class="hidden"><h2>الأذكار</h2><div class="tabs" id="adhTabs">
+<button class="secondary" data-kind="morning">أذكار الصباح</button><button class="secondary" data-kind="evening">أذكار المساء</button><button class="secondary" data-kind="after">بعد الصلاة</button><button class="secondary" data-kind="sleep">أذكار النوم</button><button class="secondary" data-kind="general">أذكار متنوعة</button>
+</div><div id="adhList"></div><p class="note">هذه مرحلة أولى من مكتبة الأذكار، مع إظهار المصدر والعدد الوارد. سنضيف بقية أبواب حصن المسلم بعد مراجعة النصوص والتخريج.</p></section>
+
+<section id="tasbeeh" class="hidden"><h2>المسبحة الإلكترونية</h2><select id="phrase"><option>سُبْحَانَ اللَّهِ</option><option>الْحَمْدُ لِلَّهِ</option><option>اللَّهُ أَكْبَرُ</option><option>أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ</option><option>لَا إِلَهَ إِلَّا اللَّهُ</option></select>
+<div class="big"><strong id="count">0</strong><small id="goal">الهدف: 33</small></div><button class="primary" id="tap">اضغط للتسبيح</button><div class="row"><button class="secondary" id="reset">تصفير</button><button class="secondary" id="target">تغيير الهدف</button></div><p class="note">يُحفظ العدد تلقائيًا على جهازك.</p></section>
+
+<section id="saved" class="hidden"><h2>الآيات المحفوظة</h2><div id="savedList">لا توجد آيات محفوظة بعد.</div></section>
+</main>
+<nav><button class="active" data-page="home">⌂<br>الرئيسية</button><button data-page="quran">۞<br>القرآن</button><button data-page="adhkar">🤲<br>الأذكار</button><button data-page="tasbeeh">📿<br>التسبيح</button></nav>
 <script>
-const $=x=>document.getElementById(x);let surahs=[],font=27,count=+(localStorage.noorCount||0),current=1;
-function page(id){document.querySelectorAll('main section').forEach(x=>x.classList.add('hidden'));$(id).classList.remove('hidden');if(id==='saved')showSaved()}
+const $=id=>document.getElementById(id);
+let surahs=[],font=27,count=+(localStorage.noorCount||0),goal=+(localStorage.noorGoal||33),current=1,kind='morning';
+function page(id){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='saved')showSaved()}
 document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>page(b.dataset.page));
-function drawCount(){$('count').textContent=count;localStorage.noorCount=count}drawCount();
-$('tap').onclick=()=>{count++;drawCount()};$('reset').onclick=()=>{count=0;drawCount()};
+function drawCount(){$('count').textContent=count;$('goal').textContent='الهدف: '+goal;localStorage.noorCount=count;localStorage.noorGoal=goal}
+$('tap').onclick=()=>{count++;drawCount()};$('reset').onclick=()=>{count=0;drawCount()};$('target').onclick=()=>{goal=goal===33?100:goal===100?99:33;drawCount()};drawCount();
 async function fetchJson(url){let r=await fetch(url);if(!r.ok)throw Error('network');return r.json()}
-async function init(){try{let j=await fetchJson('https://api.alquran.cloud/v1/surah');surahs=j.data;renderSurahs();updateLast()}catch(e){$('surahList').textContent='تعذر تحميل فهرس السور. تحقق من الإنترنت ثم أعد تحميل الصفحة.'}}
-function renderSurahs(){let q=$('search').value.trim();$('surahList').innerHTML='';surahs.filter(s=>!q||s.name.includes(q)||String(s.number)===q||s.englishName.toLowerCase().includes(q.toLowerCase())).forEach(s=>{let b=document.createElement('button');b.className='item';b.innerHTML='<span></span><small></small>' ;b.children[0].textContent=s.number+' — '+s.name;b.children[1].textContent=s.numberOfAyahs+' آية';b.onclick=()=>openSurah(s.number);$('surahList').append(b)})}
+async function init(){try{let j=await fetchJson('https://api.alquran.cloud/v1/surah');if(j.code!==200)throw 0;surahs=j.data;renderSurahs();updateLast()}catch(e){$('surahList').textContent='تعذر تحميل فهرس السور. تحقق من الإنترنت ثم أعد تحميل الصفحة.'}}
+function renderSurahs(){let q=$('search').value.trim();$('surahList').innerHTML='';surahs.filter(s=>!q||s.name.includes(q)||String(s.number)===q||s.englishName.toLowerCase().includes(q.toLowerCase())).forEach(s=>{let b=document.createElement('button');b.className='item';let a=document.createElement('span'),c=document.createElement('small');a.textContent=s.number+' — '+s.name;c.textContent=s.numberOfAyahs+' آية';b.append(a,c);b.onclick=()=>openSurah(s.number);$('surahList').append(b)})}
 $('search').oninput=renderSurahs;
-function db(){return new Promise((ok,no)=>{let r=indexedDB.open('NoorQuran',1);r.onupgradeneeded=()=>r.result.createObjectStore('s',{keyPath:'number'});r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}
-async function cache(data){let d=await db();return new Promise((ok,no)=>{let t=d.transaction('s','readwrite');t.objectStore('s').put(data);t.oncomplete=ok;t.onerror=()=>no(t.error)})}
-async function cached(n){try{let d=await db();return await new Promise(ok=>{let r=d.transaction('s').objectStore('s').get(n);r.onsuccess=()=>ok(r.result||null);r.onerror=()=>ok(null)})}catch(e){return null}}
+function db(){return new Promise((ok,no)=>{let r=indexedDB.open('NoorQuranV2',1);r.onupgradeneeded=()=>r.result.createObjectStore('surahs',{keyPath:'number'});r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}
+async function cache(data){let d=await db();return new Promise((ok,no)=>{let t=d.transaction('surahs','readwrite');t.objectStore('surahs').put(data);t.oncomplete=ok;t.onerror=()=>no(t.error)})}
+async function cached(n){try{let d=await db();return await new Promise(ok=>{let r=d.transaction('surahs').objectStore('surahs').get(n);r.onsuccess=()=>ok(r.result||null);r.onerror=()=>ok(null)})}catch(e){return null}}
 async function openSurah(n){current=n;$('surahList').classList.add('hidden');$('search').classList.add('hidden');$('reader').classList.remove('hidden');$('ayahList').textContent='جارٍ تحميل السورة…';let data;
-try{let j=await fetchJson('https://api.alquran.cloud/v1/surah/'+n+'/quran-uthmani');data=j.data;await cache(data)}catch(e){data=await cached(n)}
+try{let j=await fetchJson('https://api.alquran.cloud/v1/surah/'+n+'/quran-uthmani');if(j.code!==200)throw 0;data=j.data;await cache(data)}catch(e){data=await cached(n)}
 if(!data){$('ayahList').textContent='لم تُحمّل هذه السورة من قبل. اتصل بالإنترنت لفتحها.';return}
 $('surahTitle').textContent=data.name+' — '+data.englishName;$('ayahList').innerHTML='';
 data.ayahs.forEach(a=>{let box=document.createElement('div'),p=document.createElement('div'),tools=document.createElement('div'),save=document.createElement('button');p.className='ayah';p.style.setProperty('--qsize',font+'px');p.textContent=a.text+' ۞ '+a.numberInSurah;save.className='secondary';save.textContent='حفظ الآية 🔖';save.onclick=()=>saveAyah(n,a.numberInSurah,a.text,data.name);tools.append(save);box.append(p,tools);$('ayahList').append(box)});
@@ -60,6 +87,55 @@ $('continue').onclick=()=>{page('quran');openSurah(+(localStorage.noorLast||1))}
 $('back').onclick=()=>{$('reader').classList.add('hidden');$('surahList').classList.remove('hidden');$('search').classList.remove('hidden')};
 $('minus').onclick=()=>resize(-2);$('plus').onclick=()=>resize(2);function resize(d){font=Math.max(20,Math.min(42,font+d));document.querySelectorAll('.ayah').forEach(x=>x.style.setProperty('--qsize',font+'px'))}
 function saveAyah(s,a,t,name){let x=JSON.parse(localStorage.noorSaved||'[]');if(!x.some(v=>v.s===s&&v.a===a)){x.push({s,a,t,name});localStorage.noorSaved=JSON.stringify(x)}alert('تم حفظ الآية')}
-function showSaved(){let x=JSON.parse(localStorage.noorSaved||'[]');$('savedList').innerHTML='';if(!x.length){$('savedList').textContent='لا توجد آيات محفوظة.';return}x.forEach(v=>{let b=document.createElement('button');b.className='item';b.textContent=v.name+' — الآية '+v.a+' : '+v.t;b.onclick=()=>{page('quran');openSurah(v.s)};$('savedList').append(b)})}
-init();if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script></body></html>
+function showSaved(){let x=JSON.parse(localStorage.noorSaved||'[]');$('savedList').innerHTML='';if(!x.length){$('savedList').textContent='لا توجد آيات محفوظة بعد.';return}x.forEach(v=>{let b=document.createElement('button');b.className='item';b.textContent=v.name+' — الآية '+v.a+' : '+v.t;b.onclick=()=>{page('quran');openSurah(v.s)};$('savedList').append(b)})}
+const A={
+morning:[
+['آية الكرسي','اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ','مرة واحدة','البقرة: 255؛ القرآن الكريم'],
+['سورة الإخلاص والمعوذتان','قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.','3 مرات لكل سورة','أبو داود (5082)، والترمذي (3575)'],
+['أصبحنا وأصبح الملك لله','أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ.','مرة واحدة','صحيح مسلم (2723)'],
+['اللهم بك أصبحنا','اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.','مرة واحدة','الترمذي (3391) بنحوه'],
+['سيد الاستغفار','اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.','مرة واحدة','صحيح البخاري (6306)'],
+['اللهم إني أصبحت أشهدك','اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ.','4 مرات','أبو داود (5069)'],
+['اللهم ما أصبح بي من نعمة','اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ.','مرة واحدة','أبو داود (5073)'],
+['بسم الله الذي لا يضر','بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.','3 مرات','أبو داود (5088)، الترمذي (3388)'],
+['رضيت بالله ربًا','رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا.','3 مرات','أبو داود (5072)، الترمذي (3389)'],
+['يا حي يا قيوم','يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ.','مرة واحدة','مستدرك الحاكم'],
+['سبحان الله وبحمده','سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.','100 مرة','صحيح البخاري (6405)، صحيح مسلم (2691)']
+],
+evening:[
+['آية الكرسي','اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ','مرة واحدة','البقرة: 255؛ القرآن الكريم'],
+['سورة الإخلاص والمعوذتان','قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.','3 مرات لكل سورة','أبو داود (5082)، والترمذي (3575)'],
+['أمسينا وأمسى الملك لله','أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ.','مرة واحدة','صحيح مسلم (2723)؛ بصيغة المساء'],
+['اللهم بك أمسينا','اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ.','مرة واحدة','الترمذي (3391) بنحوه'],
+['سيد الاستغفار','اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.','مرة واحدة','صحيح البخاري (6306)'],
+['بسم الله الذي لا يضر','بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.','3 مرات','أبو داود (5088)، الترمذي (3388)'],
+['رضيت بالله ربًا','رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا.','3 مرات','أبو داود (5072)، الترمذي (3389)'],
+['سبحان الله وبحمده','سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.','100 مرة','صحيح البخاري (6405)، صحيح مسلم (2691)']
+],
+after:[
+['أستغفر الله','أَسْتَغْفِرُ اللَّهَ.','3 مرات','صحيح مسلم (591)'],
+['اللهم أنت السلام','اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ.','مرة واحدة','صحيح مسلم (591)'],
+['التسبيح والتحميد والتكبير','سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَاللَّهُ أَكْبَرُ.','33 مرة لكل واحدة','صحيح مسلم (597)'],
+['لا إله إلا الله وحده','لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.','مرة واحدة بعد التسبيح','صحيح مسلم (597)'],
+['آية الكرسي','قراءة آية الكرسي كاملة.','مرة واحدة','النسائي في عمل اليوم والليلة؛ صححه الألباني']
+],
+sleep:[
+['باسمك اللهم أموت وأحيا','بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.','مرة واحدة','صحيح البخاري (6324)'],
+['اللهم قني عذابك','اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ.','3 مرات','أبو داود (5045)، الترمذي (3398)'],
+['آية الكرسي','قراءة آية الكرسي كاملة.','مرة واحدة','صحيح البخاري (2311)'],
+['الإخلاص والمعوذتان','يجمع كفيه وينفث فيهما ويقرأ الإخلاص والفلق والناس، ثم يمسح بهما ما استطاع من جسده.','3 مرات','صحيح البخاري (5017)'],
+['آخر آيتين من سورة البقرة','آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ... إلى آخر السورة.','مرة واحدة','صحيح البخاري (5009)، صحيح مسلم (808)']
+],
+general:[
+['سبحان الله وبحمده','سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.','100 مرة أو في سائر اليوم','صحيح البخاري (6405)، صحيح مسلم (2691)'],
+['لا إله إلا الله وحده لا شريك له','لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.','10 مرات','صحيح مسلم (2693)'],
+['أستغفر الله وأتوب إليه','أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ.','يُكثر منها','صحيح مسلم (2702)'],
+['الصلاة على النبي ﷺ','اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ.','بلا عدد محدد هنا','صحيح مسلم (408)']
+]
+};
+const labels={morning:'أذكار الصباح',evening:'أذكار المساء',after:'أذكار بعد الصلاة',sleep:'أذكار النوم',general:'أذكار متنوعة'};
+function renderAdh(){kind=kind||'morning';$('adhList').innerHTML='';(A[kind]||[]).forEach((a,i)=>{let d=document.createElement('article');d.className='dhikr';let title=document.createElement('b');title.textContent=a[0];let text=document.createElement('div');text.className='text';text.textContent=a[1];let meta=document.createElement('div');meta.className='meta';meta.textContent='التكرار: '+a[2]+' • المصدر: '+a[3];let row=document.createElement('div');row.className='counter';let status=document.createElement('span');status.className='badge';status.textContent='اقرأ بتأنٍ';let done=document.createElement('button');done.className='countbtn';done.textContent='تمت القراءة ✓';done.onclick=()=>{status.textContent='تمت ✓';done.textContent='إعادة';done.onclick=()=>{status.textContent='اقرأ بتأنٍ';done.textContent='تمت القراءة ✓'}};row.append(status,done);d.append(title,text,meta,row);$('adhList').append(d)})}
+document.querySelectorAll('[data-kind]').forEach(b=>b.onclick=()=>{kind=b.dataset.kind;renderAdh()});renderAdh();init();
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>

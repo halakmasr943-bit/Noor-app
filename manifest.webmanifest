@@ -1,1 +1,12 @@
-{"name":"نور | NOOR","short_name":"نور","start_url":"./","display":"standalone","background_color":"#f7f5ef","theme_color":"#123c32","lang":"ar","dir":"rtl"}
+{
+  "name": "نور | NOOR",
+  "short_name": "نور",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#123c32",
+  "lang": "ar",
+  "dir": "rtl",
+  "description": "تطبيق مجاني لقراءة القرآن والأذكار والتسبيح"
+}
